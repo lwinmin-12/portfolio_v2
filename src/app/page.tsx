@@ -1,5 +1,7 @@
 const page = () => {
-  return <div>page testing</div>;
+  return <div className=" h-[200vh]">
+    
+  </div>;
 };
 
 export default page;
