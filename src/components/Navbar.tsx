@@ -1,15 +1,21 @@
 const Navbar = () => {
   return (
-    <div className="sticky top-0 w-full h-16 border border-l-0 border-b-gray-400 flex items-center justify-between">
+    <div className="sticky top-0 w-full h-16 border border-l-0 border-b-gray-400 flex items-center justify-between z-50">
       <div>
         {/* biome-ignore lint/a11y/noSvgWithoutTitle: <explanation> */}
-        <svg width="150" height="50" viewBox="0 0 420 120" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M177 14.1H404.01" stroke="#231F20" stroke-width="1.99986" />
+        <svg
+          width="150"
+          height="50"
+          viewBox="0 0 420 120"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path d="M177 14.1H404.01" stroke="#231F20" strokeWidth="1.99986" />
           <path
             d="M75.4115 84.5052L71.0625 93.9531C67.9167 100.698 63.4167 102.797 52.1719 102.797H37.4844C33.1354 102.797 33.2865 101.297 33.2865 96.0521V22.7448C33.2865 17.4948 36.1354 16.1458 43.7813 15.25V13C33.4323 13.4479 22.3438 13.4479 12 13V15.25C19.6406 16.1458 22.4896 17.4948 22.4896 22.7448V96.349C22.4896 101.599 19.9427 103.245 12.2969 103.844V106.094H73.9115C74.9583 98.75 75.8594 92.3021 78.2604 84.5052H75.4115Z"
             fill="#231F20"
           />
-          <path d="M180 105H407.01" stroke="#231F20" stroke-width="1.99848" />
+          <path d="M180 105H407.01" stroke="#231F20" strokeWidth="1.99848" />
           <path
             d="M169.292 97.401V21.3958C169.292 17.4948 172.141 16.1458 179.339 15.25V13C172.891 13.4479 165.245 13.4479 158.651 13L131.219 88.5521L101.083 13C93.2917 13.4479 86.6927 13.4479 79.0469 13V15.25C86.6927 16.1458 90.1406 17.349 90.1406 21.6927V97.401C90.1406 102.495 87.4427 102.797 78 103.844V106.094C87.2917 105.646 96.8854 105.646 106.479 106.094V103.844C97.3385 102.797 94.1875 102.495 94.1875 97.401V24.3906L126.568 106.094H128.37L158.651 24.3906V97.401C158.651 102.495 155.802 102.948 148.005 103.844V106.094C158.349 105.646 169.594 105.646 179.786 106.094V103.844C172.141 102.948 169.292 102.495 169.292 97.401Z"
             fill="#231F20"
@@ -25,7 +31,9 @@ const Navbar = () => {
         </svg>
       </div>
       <div className="w-[40%] flex justify-around text-gray-500 font-medium">
-        <a href="/" className="text-black">Home</a>
+        <a href="/" className="text-black">
+          Home
+        </a>
         <a href="/">about me</a>
         <a href="/">Projects</a>
         <a href="/">Skills</a>

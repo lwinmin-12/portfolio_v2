@@ -17,6 +17,13 @@ const config: Config = {
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
+      fontSize: {
+        zero: "10px",
+        one: "25.6px",
+        two: "40.96px",
+        three: "65.53px",
+        four: "104.84px",
+      },
     },
   },
   plugins: [
@@ -46,7 +53,6 @@ const config: Config = {
     },
   ],
 };
-
 
 function addVariablesForColors({ addBase, theme }: any) {
   let allColors = flattenColorPalette(theme("colors"));
