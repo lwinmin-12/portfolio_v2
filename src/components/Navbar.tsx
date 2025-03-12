@@ -1,6 +1,6 @@
 const Navbar = () => {
   return (
-    <div className="sticky top-0 w-full h-16 border border-l-0 border-b-gray-400 flex items-center justify-between z-50">
+    <div className="px-12 bg-white sticky top-0 w-full h-16 border border-l-0 border-b-gray-400 flex items-center justify-between z-50">
       <div>
         {/* biome-ignore lint/a11y/noSvgWithoutTitle: <explanation> */}
         <svg

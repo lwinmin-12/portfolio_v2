@@ -143,9 +143,9 @@ export default function Badge({ maxSpeed = 50, minSpeed = 10 }) {
 
   return (
     <>
-      <group position={[0, 3, 0]}>
+      <group position={[0, 2, 0]}>
         {/* Band */}
-        <RigidBody ref={fixed} type="fixed" position={[0, 1.5, 0]} />
+        <RigidBody ref={fixed} type="fixed" position={[0, 3, 0]} />
         <RigidBody position={[0.5, 0, 0]} {...segmentProps} ref={j1}>
           <BallCollider args={[0.1]} />
         </RigidBody>
@@ -164,8 +164,8 @@ export default function Badge({ maxSpeed = 50, minSpeed = 10 }) {
         >
           <CuboidCollider args={[0.8, 1.125, 0.01]} />
           <group
-            scale={3}
-            position={[0, -2.18, -0.05]} // for only card position
+            scale={3.5}
+            position={[0, -2.8, -0.05]} // for only card position
             onPointerOver={() => hover(true)}
             onPointerOut={() => hover(false)}
             onPointerUp={() => drag(false)}
