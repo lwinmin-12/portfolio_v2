@@ -24,7 +24,7 @@ const LandingPage = () => {
           </h3> */}
         </div>
       </div>
-      <div className="w-[30%] h-[60vh]">
+      <div className="w-[30%] h-[60vh]" data-cursor="Detail">
         <CanvasComponent />
       </div>
     </div>

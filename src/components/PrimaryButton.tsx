@@ -1,18 +1,20 @@
-import { cn } from '@/lib/utils'
-import React from 'react'
+import { cn } from "@/lib/utils";
+import React from "react";
 
 const PrimaryButton = ({
-    className
-} : {
-    className? : string
+  className,
+  name,
+}: {
+  className?: string;
+  name: string;
 }) => {
   return (
-    <button className={
-        cn("bg-black text-white rounded-lg px-12 py-2" , className)
-    }>
-        check
+    <button
+      className={cn("bg-black text-white rounded-lg px-12 py-2", className)}
+    >
+      {name}
     </button>
-  )
-}
+  );
+};
 
-export default PrimaryButton
+export default PrimaryButton;

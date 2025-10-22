@@ -1,147 +1,196 @@
 import React from "react";
-import DotAnimation from "../DotAnimation";
+
 import { Timeline } from "../ui/timeline";
+import { LayoutGrid } from "../ui/layout-grid";
+import { detExp, douExp, maharExp, mmsItExp } from "@/lib/const";
 
 const ExperiencePage = () => {
+
+  
   const data = [
+    {
+      title: "2022",
+      content: (
+        <div>
+          <div className="flex justify-between">
+            <div>
+              <p>Junior Frontend Developer</p>
+              <p className="text-two">MMS It One Stop It Solution</p>
+            </div>
+
+            <div className="mt-auto">
+              <span className="text-gray-500 text-one px-1">
+                ( 2022 - 2023 )
+              </span>
+            </div>
+          </div>
+
+          <div className="w-ful my-5">
+            <ul className="list-disc">
+              <li>
+                Experienced in creating prototypes and wireframes for various
+                websites, and developing both static and dynamic web
+                applications in collaboration with backend teams.{" "}
+              </li>
+            </ul>
+          </div>
+
+          <div className="w-full h-screen">
+            <LayoutGrid cards={mmsItExp} />
+          </div>
+        </div>
+      ),
+    },
+    {
+      title: "2023",
+      content: (
+        <div>
+          <div className="flex justify-between">
+            <div>
+              <p>Fullstack Developer ( MERN )</p>
+              <p className="text-two">Digital Engineering Tech LTD</p>
+            </div>
+
+            <div className="mt-auto">
+              <span className="text-gray-500 text-one px-1">
+                (October /2022 - November /2023 )
+              </span>
+            </div>
+          </div>
+
+          <div className="w-full my-5">
+            <ul className="list-disc">
+              <li>
+                Created prototyping and wireframing collaboration with Ui, UX
+                designer for company websites and company product devices.
+              </li>
+              <li>
+                Developed Backend Service for the company's smart water
+                controller device and smart home assistant, enabling seamless
+                control of water pumps, light bulbs, fans, and air conditioners.
+                The API integrates voice command functionality, compatible with
+                platforms such as Alexa.
+              </li>
+              <li>
+                Designed the system architecture and developed both local and
+                cloud backend services for real-time fuel station automation
+                system using Raspberry Pi, Banana Pi M5, and Banana Pi R3,
+                enabling control of Prime and Tatsuno fuel dispensers via mobile
+                apps and cloud websites, with centralized monitoring and data
+                reporting across all stations.
+              </li>
+
+              {/* <li>
+                Build NAS server and printer server solutions for the company
+                utilizing Raspberry Pi. Additionally, configured a WiFi router
+                using Banana Pi (BPI-R3) technology.
+              </li> */}
+            </ul>
+          </div>
+
+          <div className="w-full h-screen">
+            <LayoutGrid cards={detExp} />
+          </div>
+        </div>
+      ),
+    },
     {
       title: "2024",
       content: (
         <div>
-          <p className="mb-8 text-xs font-normal text-neutral-800 md:text-sm dark:text-neutral-200">
-            Built and launched Aceternity UI and Aceternity UI Pro from scratch
-          </p>
-          <div className="grid grid-cols-2 gap-4">
-            <img
-              src="https://assets.aceternity.com/templates/startup-1.webp"
-              alt="startup template"
-              width={500}
-              height={500}
-              className="h-20 w-full rounded-lg object-cover shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset] md:h-44 lg:h-60"
-            />
-            <img
-              src="https://assets.aceternity.com/templates/startup-2.webp"
-              alt="startup template"
-              width={500}
-              height={500}
-              className="h-20 w-full rounded-lg object-cover shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset] md:h-44 lg:h-60"
-            />
-            <img
-              src="https://assets.aceternity.com/templates/startup-3.webp"
-              alt="startup template"
-              width={500}
-              height={500}
-              className="h-20 w-full rounded-lg object-cover shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset] md:h-44 lg:h-60"
-            />
-            <img
-              src="https://assets.aceternity.com/templates/startup-4.webp"
-              alt="startup template"
-              width={500}
-              height={500}
-              className="h-20 w-full rounded-lg object-cover shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset] md:h-44 lg:h-60"
-            />
+          <div className="flex justify-between">
+            <div>
+              <p>Backend Developer ( Node js )</p>
+              <p className="text-two">DouDouDoujin Co., Ltd.</p>
+            </div>
+
+            <div className="mt-auto">
+              <span className="text-gray-500 text-one px-1">
+                (August /2024 - July/2025 )
+              </span>
+            </div>
+          </div>
+
+          <div className="my-5 w-full">
+            <ul className="list-disc">
+              <li>
+                Backend Development: Developed core backend features, including
+                Manga, Voice, Manga Pages, and Bookmark modules, ensuring
+                scalable and efficient database management and API performance.
+              </li>
+              <li>
+                Frontend Development: Collaborated with UI/UX designers to build
+                user interfaces for Manga and Voice-related functionalities,
+                ensuring an intuitive and engaging user experience.
+              </li>
+              <li>
+                Built responsive interfaces with React and Zustand, developed
+                robust backends using Hono and PostgreSQL, integrated AWS S3,
+                and ensured reliability through unit testing and Bun.js
+                optimizations
+              </li>
+            </ul>
+          </div>
+
+          <div className="w-full h-[60vh]">
+            <LayoutGrid cards={douExp} />
           </div>
         </div>
       ),
     },
     {
-      title: "Early 2023",
+      title: "2025",
       content: (
         <div>
-          <p className="mb-8 text-xs font-normal text-neutral-800 md:text-sm dark:text-neutral-200">
-            I usually run out of copy, but when I see content this big, I try to
-            integrate lorem ipsum.
-          </p>
-          <p className="mb-8 text-xs font-normal text-neutral-800 md:text-sm dark:text-neutral-200">
-            Lorem ipsum is for people who are too lazy to write copy. But we are
-            not. Here are some more example of beautiful designs I built.
-          </p>
-          <div className="grid grid-cols-2 gap-4">
-            <img
-              src="https://assets.aceternity.com/pro/hero-sections.png"
-              alt="hero template"
-              width={500}
-              height={500}
-              className="h-20 w-full rounded-lg object-cover shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset] md:h-44 lg:h-60"
-            />
-            <img
-              src="https://assets.aceternity.com/features-section.png"
-              alt="feature template"
-              width={500}
-              height={500}
-              className="h-20 w-full rounded-lg object-cover shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset] md:h-44 lg:h-60"
-            />
-            <img
-              src="https://assets.aceternity.com/pro/bento-grids.png"
-              alt="bento template"
-              width={500}
-              height={500}
-              className="h-20 w-full rounded-lg object-cover shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset] md:h-44 lg:h-60"
-            />
-            <img
-              src="https://assets.aceternity.com/cards.png"
-              alt="cards template"
-              width={500}
-              height={500}
-              className="h-20 w-full rounded-lg object-cover shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset] md:h-44 lg:h-60"
-            />
-          </div>
-        </div>
-      ),
-    },
-    {
-      title: "Changelog",
-      content: (
-        <div>
-          <p className="mb-4 text-xs font-normal text-neutral-800 md:text-sm dark:text-neutral-200">
-            Deployed 5 new components on Aceternity today
-          </p>
-          <div className="mb-8">
-            <div className="flex items-center gap-2 text-xs text-neutral-700 md:text-sm dark:text-neutral-300">
-              ✅ Card grid component
+          <div className="flex justify-between">
+            <div>
+              <p>Frontend Developer ( Next js )</p>
+              <p className="text-two">ABC Content Solutions Co., Ltd</p>
             </div>
-            <div className="flex items-center gap-2 text-xs text-neutral-700 md:text-sm dark:text-neutral-300">
-              ✅ Startup template Aceternity
-            </div>
-            <div className="flex items-center gap-2 text-xs text-neutral-700 md:text-sm dark:text-neutral-300">
-              ✅ Random file upload lol
-            </div>
-            <div className="flex items-center gap-2 text-xs text-neutral-700 md:text-sm dark:text-neutral-300">
-              ✅ Himesh Reshammiya Music CD
-            </div>
-            <div className="flex items-center gap-2 text-xs text-neutral-700 md:text-sm dark:text-neutral-300">
-              ✅ Salman Bhai Fan Club registrations open
+
+            <div className="mt-auto">
+              <span className="text-gray-500 text-one px-1">
+                (November /2023 - current )
+              </span>
             </div>
           </div>
-          <div className="grid grid-cols-2 gap-4">
-            <img
-              src="https://assets.aceternity.com/pro/hero-sections.png"
-              alt="hero template"
-              width={500}
-              height={500}
-              className="h-20 w-full rounded-lg object-cover shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset] md:h-44 lg:h-60"
-            />
-            <img
-              src="https://assets.aceternity.com/features-section.png"
-              alt="feature template"
-              width={500}
-              height={500}
-              className="h-20 w-full rounded-lg object-cover shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset] md:h-44 lg:h-60"
-            />
-            <img
-              src="https://assets.aceternity.com/pro/bento-grids.png"
-              alt="bento template"
-              width={500}
-              height={500}
-              className="h-20 w-full rounded-lg object-cover shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset] md:h-44 lg:h-60"
-            />
-            <img
-              src="https://assets.aceternity.com/cards.png"
-              alt="cards template"
-              width={500}
-              height={500}
-              className="h-20 w-full rounded-lg object-cover shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset] md:h-44 lg:h-60"
-            />
+
+          <div className="my-5 w-full">
+            <ul className="list-disc">
+              <li>
+                Developed a Movie Content Management System (CMS) dashboard
+                using Next.js for the Mahar Mobile Application, simplifying the
+                handling of movie-related data.
+              </li>
+              <li>
+                Created a customer service dashboard for the Mahar Movie and
+                Music Application to improve client support and efficiency.
+              </li>
+              <li>
+                Developed various campaign pages to enhance user engagement and
+                drive marketing initiatives.
+              </li>
+              <li>
+                Designed and developed the Mahar Web Page to expand the
+                platform's reach and improve user experience.
+              </li>
+              <li>
+                Developed a new movie streaming platform called MyanFlix,
+                featuring a responsive UI, seamless video playback, and a
+                content management system for MyanFlix.
+              </li>
+              <li>
+                Developed a deep link system for Mahar's digital marketing
+                department, enabling seamless content sharing across social
+                media platforms. Designed and built a dashboard for generating
+                deep links, allowing marketers to create and track links
+                efficiently, enhancing user engagement and campaign performance.
+              </li>
+            </ul>
+          </div>
+
+          <div className="w-full h-screen">
+            <LayoutGrid cards={maharExp} />
           </div>
         </div>
       ),
@@ -150,7 +199,6 @@ const ExperiencePage = () => {
 
   return (
     <div>
-      <DotAnimation text={"Experiences"} />
       <div className="relative w-full overflow-clip">
         <Timeline data={data} />
       </div>
