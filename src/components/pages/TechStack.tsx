@@ -114,8 +114,8 @@ const TechStack = () => {
 
         <div className="  w-full flex flex-col md:flex-row items-start md:items-center h-[500px] gap-6">
           {/* Left: description */}
-          <div className="md:w-1/2">
-            <p className="text-one text-justify p-2 ">
+          <div className="md:w-1/2 ">
+            <p className="text-one text-justify p-2  ">
               As a Frontend Developer, I craft clean, modern, and interactive
               user interfaces using
               <span className="font-medium text-green-600"> React</span>,
@@ -132,6 +132,8 @@ const TechStack = () => {
           <div className="md:w-1/2 grid grid-cols-1 gap-4">
             <TechSkills skills={frontendSkills} />
           </div>
+
+
         </div>
       </div>
 

@@ -14,9 +14,6 @@ const page = () => {
       {/* landing page */}
       <LandingPage />
 
-      <div className="px-12 pb-1 text-one ">
-        <p>ABOUT ME!</p>
-      </div>
       <hr className="border-gray-300 w-full" />
 
       <AboutMePage />

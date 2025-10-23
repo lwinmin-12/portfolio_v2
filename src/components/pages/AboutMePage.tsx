@@ -1,44 +1,60 @@
 "use client";
 import React from "react";
-import AboutHi from "../../animations/AboutHi.json";
-import Lottie from "lottie-react";
 
 const AboutMePage = () => {
   return (
-    <div className="px-12 ">
-      <p className="text-two text-gray-600">
-        I’m Lwin Min Oo, 21. Started programming in 2021 as a hobby, now
-        pursuing my passion to become a full-stack web developer.
-      </p>
-      <div className="flex justify-between items-center">
-        <div className="w-[50%] ">
-          <Lottie
-            className="w-full"
-            animationData={AboutHi}
-            loop={true}
-            autoPlay={true}
-          />
+      <div className="flex flex-col lg:flex-row justify-between w-full p-12">
+        {/* Animation Section */}
+        <div className="w-full lg:w-[50%]">
+          <h2 className="text-lg md:text-4xl py-5">About Me</h2>
+          <p className="text-neutral-700 dark:text-neutral-300 text-sm md:text-base max-w-sm">A quick introduction to who I am.</p>
         </div>
-        <div className="w-[50%] space-y-10 p-12">
-          <div>
-            <h4 className="text-two">education</h4>
-            <p className="text-one">
-              I am a third-year physics student at Yadanabon University I
-              dropped out of Yadanarbon University in early 2021. And then I
-              attended courses at MMS IT and entered the web development field.
-            </p>
+
+        {/* Content Section */}
+        <div className="bg-white   md:p-5 space-y-6 w-full lg:w-[50%] ">
+          {/* Experience badge only */}
+          <div className="inline-flex items-center gap-2 bg-green-50 text-green-700 px-3 py-1 rounded-full text-sm font-medium">
+            <span className="w-2 h-2 bg-green-500 rounded-full"></span>
+            4+ Years of Development Experience
           </div>
-          <div>
-            <h4 className="text-two">professional experiences</h4>
-            <p className="text-one">
-              I am a third-year physics student at Yadanabon University I
-              dropped out of Yadanarbon University in early 2021. And then I
-              attended courses at MMS IT and entered the web development field.
+
+          {/* Content paragraphs */}
+          <div className=" space-y-4 text-gray-700">
+            <p className="text-justify leading-relaxed">
+              Hi! I'm a developer with{" "}
+              <span className="font-semibold text-gray-800">
+                4 years of experience
+              </span>{" "}
+              in web development and software projects. My journey began during
+              my third year in Physics at Yadanarbon University, where I
+              discovered my passion for programming. While attending university,
+              I also completed the{" "}
+              <span className="font-medium">
+                A+ certification at I-Net College
+              </span>
+              , strengthening my foundation in IT and computing.
+            </p>
+
+            <p className="text-justify leading-relaxed">
+              I then joined <span className="font-medium">MMS IT</span>, gaining
+              hands-on experience in building dynamic and responsive web
+              applications. To further advance my skills, I completed the{" "}
+              <span className="font-medium">NCC Level in Computing</span>,
+              deepening my understanding of software development, databases, and
+              modern programming practices.
+            </p>
+
+            <p className="text-justify leading-relaxed">
+              I've worked on a variety of projects, focusing on delivering{" "}
+              <span className="font-medium">
+                clean, efficient, and scalable solutions
+              </span>
+              . I enjoy solving problems through code, learning new
+              technologies, and creating experiences that make a difference.
             </p>
           </div>
         </div>
       </div>
-    </div>
   );
 };
 
