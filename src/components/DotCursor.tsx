@@ -33,11 +33,13 @@ export default function DotCursor() {
 
   return (
     <div
-      className={`fixed  bg-green-400 rounded-full pointer-events-none z-[9999]  duration-150 flex justify-center items-center ${
+      className={`hidden fixed  bg-green-400 rounded-full pointer-events-none z-[9999]  duration-150 sm:flex justify-center items-center ${
         text ? "w-20 h-20 " : "w-4 h-4"
       }`}
       style={{
-        transform: !text ? `translate(${position.x - 75}px, ${position.y - 75}px)` : `translate(${position.x - 100}px, ${position.y - 100}px)`,
+        transform: !text
+          ? `translate(${position.x - 75}px, ${position.y - 75}px)`
+          : `translate(${position.x - 100}px, ${position.y - 100}px)`,
       }}
     >
       <p className="text-white text-one font-medium">{text}</p>

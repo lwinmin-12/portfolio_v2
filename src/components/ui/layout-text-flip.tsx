@@ -26,14 +26,14 @@ export const LayoutTextFlip = ({
     <>
       <motion.span
         layoutId="subtext"
-        className="text-one tracking-tight drop-shadow-lg text-green-500"
+        className="text-zero sm:text-one tracking-tight drop-shadow-lg text-green-500"
       >
         {text}
       </motion.span>
 
       <motion.span
         layout
-        className="relative w-fit overflow-hidden text-one tracking-tight text-black"
+        className="text-zero relative w-fit overflow-hidden sm:text-one tracking-tight text-black"
       >
         <AnimatePresence mode="popLayout">
           <motion.span

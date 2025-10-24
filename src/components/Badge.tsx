@@ -1,7 +1,7 @@
-"use client"
-import * as THREE from 'three';
-import { useEffect, useRef, useState } from 'react';
-import { extend, useFrame } from '@react-three/fiber';
+"use client";
+import * as THREE from "three";
+import { useEffect, useRef, useState } from "react";
+import { extend, useFrame } from "@react-three/fiber";
 import {
   BallCollider,
   CuboidCollider,
@@ -9,21 +9,21 @@ import {
   RigidBody,
   useRopeJoint,
   useSphericalJoint,
-} from '@react-three/rapier';
-import { MeshLineGeometry, MeshLineMaterial } from 'meshline';
-import { useGLTF, useTexture } from '@react-three/drei';
+} from "@react-three/rapier";
+import { MeshLineGeometry, MeshLineMaterial } from "meshline";
+import { useGLTF, useTexture } from "@react-three/drei";
 
 extend({ MeshLineGeometry, MeshLineMaterial });
 useGLTF.preload(
-  'https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/5huRVDzcoDwnbgrKUo1Lzs/53b6dd7d6b4ffcdbd338fa60265949e1/tag.glb'
+  "https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/5huRVDzcoDwnbgrKUo1Lzs/53b6dd7d6b4ffcdbd338fa60265949e1/tag.glb"
 );
 useTexture.preload(
-  'https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/SOT1hmCesOHxEYxL7vkoZ/c57b29c85912047c414311723320c16b/band.jpg'
+  "https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/SOT1hmCesOHxEYxL7vkoZ/c57b29c85912047c414311723320c16b/band.jpg"
 );
 
 // Make RigidBody physics a bit more realistic
 const segmentProps = {
-  type: 'dynamic',
+  type: "dynamic",
   canSleep: true,
   colliders: false,
   angularDamping: 2,
@@ -48,12 +48,15 @@ export default function Badge({ maxSpeed = 50, minSpeed = 10 }) {
   const [hovered, hover] = useState(false);
 
   const { nodes, materials } = useGLTF(
-    'https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/5huRVDzcoDwnbgrKUo1Lzs/53b6dd7d6b4ffcdbd338fa60265949e1/tag.glb'
+    "https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/5huRVDzcoDwnbgrKUo1Lzs/53b6dd7d6b4ffcdbd338fa60265949e1/tag.glb"
   );
   const texture = useTexture(
-    'https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/SOT1hmCesOHxEYxL7vkoZ/c57b29c85912047c414311723320c16b/band.jpg'
+    "https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/SOT1hmCesOHxEYxL7vkoZ/c57b29c85912047c414311723320c16b/band.jpg"
   );
-
+  const customImage = useTexture("/expImage/lmo4.png");
+  customImage.flipY = false;
+  customImage.wrapS = customImage.wrapT = THREE.RepeatWrapping;
+  customImage.repeat.set(2, 1);
   // A Catmull-Rom curve
   const [curve] = useState(
     () =>
@@ -78,8 +81,8 @@ export default function Badge({ maxSpeed = 50, minSpeed = 10 }) {
 
   useEffect(() => {
     if (hovered) {
-      document.body.style.cursor = dragged ? 'grabbing' : 'grab';
-      return () => void (document.body.style.cursor = 'auto');
+      document.body.style.cursor = dragged ? "grabbing" : "grab";
+      return () => void (document.body.style.cursor = "auto");
     }
   }, [hovered, dragged]);
 
@@ -139,7 +142,7 @@ export default function Badge({ maxSpeed = 50, minSpeed = 10 }) {
     );
   });
 
-  curve.curveType = 'chordal';
+  curve.curveType = "chordal";
 
   return (
     <>
@@ -160,7 +163,7 @@ export default function Badge({ maxSpeed = 50, minSpeed = 10 }) {
         <RigidBody
           ref={card}
           {...segmentProps}
-          type={dragged ? 'kinematicPosition' : 'dynamic'}
+          type={dragged ? "kinematicPosition" : "dynamic"}
         >
           <CuboidCollider args={[0.8, 1.125, 0.01]} />
           <group
@@ -181,8 +184,8 @@ export default function Badge({ maxSpeed = 50, minSpeed = 10 }) {
             {/* @ts-expect-error geometry/map are not declared? */}
             <mesh geometry={nodes.card.geometry}>
               <meshPhysicalMaterial
-                // @ts-expect-error geometry/map are not declared?
-                map={materials.base.map}
+                // map={materials.base.map}
+                map={customImage}
                 map-anisotropy={16}
                 clearcoat={1}
                 clearcoatRoughness={0.15}

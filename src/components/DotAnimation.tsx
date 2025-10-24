@@ -178,7 +178,7 @@ const DotAnimation = ({ text }: { text: string }) => {
   }, [isMouseOver]);
 
   return (
-    <div className="relative w-full h-[338px] flex items-center justify-center overflow-hidden bg-white my-10">
+    <div className="relative w-full h-[338px] flex items-center justify-center overflow-hidden bg-white my-8">
       <canvas
         ref={canvasRef}
         className="absolute top-0 left-0 w-full h-[338px] z-0"

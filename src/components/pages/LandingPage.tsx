@@ -4,27 +4,26 @@ import CanvasComponent from "../Canvas";
 
 const LandingPage = () => {
   return (
-    <div className="w-full px-12 flex justify-between">
-      <div className="w-[70%] flex justify-center items-center">
+    <div className="w-full px-3 md:px-12 flex flex-col justify-center items-center sm:flex-row sm:justify-between">
+      <div className="w-full sm:w-[60%] lg:w-[70%] flex justify-center items-center mt-8">
         <div className="w-full ">
-          <p className="text-one text-black ">Hello I am</p>
-          <p className="text-two text-green-500">Lwin Min Oo</p>
-          <p className="text-five font-bold">EXPERIENCED</p>
-          <p className="text-outline text-five text-white font-bold">
+          <p className="text-one text-black text-center sm:text-start">
+            Hello I am
+          </p>
+          <p className="text-two text-green-500 text-center sm:text-start">
+            Lwin Min Oo
+          </p>
+          <p className="text-three md:text-four lg:text-five font-bold text-center sm:text-start">
+            EXPERIENCED
+          </p>
+          <p className="text-outline text-center sm:text-start text-three md:text-four lg:text-five text-white font-bold">
             WEB DEVELOPER
           </p>
-
-          {/* <p>Shaping Web Solution From UI to Database.</p> */}
-
-          {/* <h1 className="text-three font-medium">Full Stack Developer</h1>
-          <h3 className="text-one text-gray-500">
-            Shaping Web Solutions from{" "}
-            <span className="text-green-500">UI</span> to{" "}
-            <span className="text-green-500">Database</span>.
-          </h3> */}
         </div>
       </div>
-      <div className="w-[30%] h-[60vh]" data-cursor="Detail">
+      <hr className="border-gray-300 w-full sm:hidden" />
+
+      <div className="w-full first-letter:sm:w-[40%] md:w-[30%] h-[60vh]">
         <CanvasComponent />
       </div>
     </div>

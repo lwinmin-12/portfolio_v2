@@ -38,14 +38,14 @@ const ExperiencePage = () => {
       title: "2022",
       content: (
         <div>
-          <div className="flex justify-between">
+          <div className="flex flex-col sm:flex-row justify-between">
             <div>
               <p>Junior Frontend Developer</p>
-              <p className="text-two">MMS It One Stop It Solution</p>
+              <p className="text-one font-medium sm:text-two">MMS It One Stop It Solution</p>
             </div>
 
             <div className="mt-auto">
-              <span className="text-gray-500 text-one px-1">
+              <span className="text-gray-500 text-one px-0 sm:px-1">
                 ( 2022 - 2023 )
               </span>
             </div>
@@ -71,14 +71,14 @@ const ExperiencePage = () => {
       title: "2023",
       content: (
         <div>
-          <div className="flex justify-between">
+          <div className="flex flex-col sm:flex-row justify-between">
             <div>
               <p>Fullstack Developer ( MERN )</p>
-              <p className="text-two">Digital Engineering Tech LTD</p>
+              <p className="text-one font-medium sm:text-two">Digital Engineering Tech LTD</p>
             </div>
 
             <div className="mt-auto">
-              <span className="text-gray-500 text-one px-1">
+              <span className="text-gray-500 text-one px-0 sm:px-1">
                 (October /2022 - November /2023 )
               </span>
             </div>
@@ -124,14 +124,14 @@ const ExperiencePage = () => {
       title: "2024",
       content: (
         <div>
-          <div className="flex justify-between">
+          <div className="flex flex-col sm:flex-row justify-between">
             <div>
               <p>Backend Developer ( Node js )</p>
-              <p className="text-two">DouDouDoujin Co., Ltd.</p>
+              <p className="text-one font-medium sm:text-two">DouDouDoujin Co., Ltd.</p>
             </div>
 
             <div className="mt-auto">
-              <span className="text-gray-500 text-one px-1">
+              <span className="text-gray-500 text-one px-0 sm:px-1">
                 (August /2024 - July/2025 )
               </span>
             </div>
@@ -168,14 +168,14 @@ const ExperiencePage = () => {
       title: "2025",
       content: (
         <div>
-          <div className="flex justify-between">
+          <div className="flex flex-col sm:flex-row justify-between">
             <div>
               <p>Frontend Developer ( Next js )</p>
-              <p className="text-two">ABC Content Solutions Co., Ltd</p>
+              <p className="text-one font-medium sm:text-two">ABC Content Solutions Co., Ltd</p>
             </div>
 
             <div className="mt-auto">
-              <span className="text-gray-500 text-one px-1">
+              <span className="text-gray-500 text-one px-0 sm:px-1">
                 (November /2023 - current )
               </span>
             </div>
