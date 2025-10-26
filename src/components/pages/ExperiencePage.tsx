@@ -79,7 +79,7 @@ const ExperiencePage = () => {
 
             <div className="mt-auto">
               <span className="text-gray-500 text-one px-0 sm:px-1">
-                (October /2022 - November /2023 )
+                 (October / 2022 - November / 2023 )
               </span>
             </div>
           </div>
@@ -105,12 +105,6 @@ const ExperiencePage = () => {
                 apps and cloud websites, with centralized monitoring and data
                 reporting across all stations.
               </li>
-
-              {/* <li>
-                Build NAS server and printer server solutions for the company
-                utilizing Raspberry Pi. Additionally, configured a WiFi router
-                using Banana Pi (BPI-R3) technology.
-              </li> */}
             </ul>
           </div>
 
@@ -132,7 +126,7 @@ const ExperiencePage = () => {
 
             <div className="mt-auto">
               <span className="text-gray-500 text-one px-0 sm:px-1">
-                (August /2024 - July/2025 )
+                ( August / 2024 - July / 2025 )
               </span>
             </div>
           </div>
@@ -176,7 +170,7 @@ const ExperiencePage = () => {
 
             <div className="mt-auto">
               <span className="text-gray-500 text-one px-0 sm:px-1">
-                (November /2023 - current )
+                ( November / 2023 - current )
               </span>
             </div>
           </div>
@@ -224,11 +218,9 @@ const ExperiencePage = () => {
   ];
 
   return (
-    <div>
       <div className="relative w-full overflow-clip">
         <Timeline data={data} />
       </div>
-    </div>
   );
 };
 

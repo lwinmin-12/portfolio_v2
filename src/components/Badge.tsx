@@ -15,11 +15,11 @@ import { useGLTF, useTexture } from "@react-three/drei";
 
 extend({ MeshLineGeometry, MeshLineMaterial });
 useGLTF.preload(
-  "https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/5huRVDzcoDwnbgrKUo1Lzs/53b6dd7d6b4ffcdbd338fa60265949e1/tag.glb"
+  "/card/tag.glb"
 );
-useTexture.preload(
-  "https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/SOT1hmCesOHxEYxL7vkoZ/c57b29c85912047c414311723320c16b/band.jpg"
-);
+// useTexture.preload(
+//   "https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/SOT1hmCesOHxEYxL7vkoZ/c57b29c85912047c414311723320c16b/band.jpg"
+// );
 
 // Make RigidBody physics a bit more realistic
 const segmentProps = {
@@ -48,11 +48,11 @@ export default function Badge({ maxSpeed = 50, minSpeed = 10 }) {
   const [hovered, hover] = useState(false);
 
   const { nodes, materials } = useGLTF(
-    "https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/5huRVDzcoDwnbgrKUo1Lzs/53b6dd7d6b4ffcdbd338fa60265949e1/tag.glb"
+    "/card/tag.glb"
   );
-  const texture = useTexture(
-    "https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/SOT1hmCesOHxEYxL7vkoZ/c57b29c85912047c414311723320c16b/band.jpg"
-  );
+  // const texture = useTexture(
+  //   "https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/SOT1hmCesOHxEYxL7vkoZ/c57b29c85912047c414311723320c16b/band.jpg"
+  // );
   const customImage = useTexture("/expImage/lmo4.png");
   customImage.flipY = false;
   customImage.wrapS = customImage.wrapT = THREE.RepeatWrapping;
@@ -210,7 +210,7 @@ export default function Badge({ maxSpeed = 50, minSpeed = 10 }) {
           color="black"
           depthTest={false}
           useMap={0}
-          map={texture}
+          // map={texture}
           repeat={new THREE.Vector2(2, 1)}
           lineWidth={0.3}
         />

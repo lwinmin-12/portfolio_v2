@@ -1,5 +1,6 @@
 "use client";
 import React, { useState } from "react";
+import { FaFacebook, FaGithub, FaInstagram, FaLinkedin } from "react-icons/fa";
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
@@ -7,16 +8,18 @@ export default function ContactPage() {
     subject: "",
     company: "",
     email: "",
-    message: ""
+    message: "",
   });
   const [isLoading, setIsLoading] = useState(false);
   const [isSent, setIsSent] = useState(false);
   const [error, setError] = useState("");
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
     setFormData({
       ...formData,
-      [e.target.name]: e.target.value
+      [e.target.name]: e.target.value,
     });
     // Clear error when user starts typing
     if (error) setError("");
@@ -28,10 +31,10 @@ export default function ContactPage() {
     setError("");
 
     try {
-      const response = await fetch('/api/email', {
-        method: 'POST',
+      const response = await fetch("/api/email", {
+        method: "POST",
         headers: {
-          'Content-Type': 'application/json',
+          "Content-Type": "application/json",
         },
         body: JSON.stringify(formData),
       });
@@ -39,7 +42,7 @@ export default function ContactPage() {
       const data = await response.json();
 
       if (!response.ok) {
-        throw new Error(data.message || 'Failed to send message');
+        throw new Error(data.message || "Failed to send message");
       }
 
       setIsSent(true);
@@ -48,24 +51,23 @@ export default function ContactPage() {
         subject: "",
         company: "",
         email: "",
-        message: ""
+        message: "",
       });
 
       // Reset success message after 5 seconds
       setTimeout(() => {
         setIsSent(false);
       }, 5000);
-
-    } catch (error : any) {
-      console.error('Error:', error);
-      setError(error.message || 'Failed to send message. Please try again.');
+    } catch (error: any) {
+      console.error("Error:", error);
+      setError(error.message || "Failed to send message. Please try again.");
     } finally {
       setIsLoading(false);
     }
   };
 
   return (
-    <section className="min-h-[80vh] bg-gray-50 text-gray-800 flex flex-col justify-center px-8 md:px-16 lg:px-32 py-20">
+    <section className="min-h-[80vh]  text-gray-800 flex flex-col justify-center px-8 md:px-16 lg:px-32 py-20">
       <div className="grid md:grid-cols-2 gap-16 w-full">
         {/* Left Side */}
         <div className="flex flex-col justify-between">
@@ -79,12 +81,40 @@ export default function ContactPage() {
           <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between text-sm text-gray-500 gap-6">
             <div>
               <h4 className="font-medium text-gray-800 mb-2">Find Me</h4>
-              <p className="space-x-4">
-                <span data-cursor="facebook">FB</span>
-                <span data-cursor="instagram">IG</span>
-                <span data-cursor="github">GH</span>
-                <span data-cursor="linkedin">IN</span>
-              </p>
+              <div className="flex space-x-4 text-gray-700 text-xl">
+                <a
+                  href="https://www.facebook.com/lwinminoo45/"
+                  target="_blank"
+                  data-cursor="facebook"
+                  className="hover:text-blue-600"
+                >
+                  <FaFacebook />
+                </a>
+                <a
+                  href="https://www.instagram.com/lmo.lwin/"
+                  target="_blank"
+                  data-cursor="instagram"
+                  className="hover:text-pink-500"
+                >
+                  <FaInstagram />
+                </a>
+                <a
+                  href="https://github.com/lwinmin-12"
+                  target="_blank"
+                  data-cursor="github"
+                  className="hover:text-gray-900"
+                >
+                  <FaGithub />
+                </a>
+                <a
+                  href="https://www.linkedin.com/in/lwinminoo-dev/"
+                  target="_blank"
+                  data-cursor="linkedin"
+                  className="hover:text-blue-500"
+                >
+                  <FaLinkedin />
+                </a>
+              </div>
             </div>
             <div>
               <p>Myanmar</p>
@@ -194,11 +224,7 @@ export default function ContactPage() {
                 </span>
               )}
 
-              {error && (
-                <span className="text-red-600 text-sm">
-                  {error}
-                </span>
-              )}
+              {error && <span className="text-red-600 text-sm">{error}</span>}
             </div>
           </form>
         </div>

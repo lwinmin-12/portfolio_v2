@@ -19,7 +19,7 @@ const Sidebar = () => {
   return (
     <div className="hidden md:flex w-[68px] h-screen sticky left-0 top-0 flex-col border-r border-gray-400">
       {/* Top Icon */}
-      <div className="border-b border-gray-400 flex justify-center items-center h-[68px]">
+      <div className="border-b border-gray-400 flex justify-center items-center h-[64px]">
         <CgMenuGridO size={24} />
       </div>
 

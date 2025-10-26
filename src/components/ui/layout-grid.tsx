@@ -9,6 +9,7 @@ type Card = {
   thumbnail: string;
   link?: string;
   cusData?: string;
+  imgPosition : string
 };
 
 export const LayoutGrid = ({ cards }: { cards: Card[] }) => {
@@ -45,7 +46,8 @@ const ImageComponent = ({ card }: { card: Card }) => {
       height="500"
       width="500"
       className={cn(
-        "object-cover object-top absolute inset-0 h-full w-full transition duration-200 hover:scale-110"
+        card.imgPosition,
+        " object-top absolute inset-0 h-full w-full transition duration-200 hover:scale-110"
       )}
       alt="thumbnail"
     />
