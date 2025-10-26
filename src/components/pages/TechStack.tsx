@@ -329,7 +329,7 @@ const TechStack = () => {
       {/* Frontend */}
       <div className="px-4 sm:px-6 lg:px-8 bg-white sticky top-20 sm:top-24 border border-gray-400 rounded-2xl">
         <div>
-          <h1 className="py-4 sm:py-5 text-three font-medium text-base sm:text-xl">Frontend Development</h1>
+          <h1 className="py-4 sm:py-5 text-two  font-medium text-sm sm:text-xl">Frontend Development</h1>
           <hr className="border-gray-400 w-full" />
         </div>
 
@@ -363,7 +363,7 @@ const TechStack = () => {
       {/* Backend */}
       <div className="px-4 sm:px-6 lg:px-8 bg-white sticky top-24 sm:top-28 border border-gray-400 rounded-2xl mt-4 sm:mt-6">
         <div>
-          <h1 className="py-4 sm:py-5 text-three font-medium text-base sm:text-xl">Backend Development</h1>
+          <h1 className="py-4 sm:py-5 text-two font-medium sm:text-xl">Backend Development</h1>
           <hr className="border-gray-400 w-full" />
         </div>
 
@@ -399,7 +399,7 @@ const TechStack = () => {
       {/* Tools & Other */}
       <div className="px-4 sm:px-6 lg:px-8 bg-white sticky top-28 sm:top-32 border border-gray-400 rounded-2xl mt-4 sm:mt-6">
         <div>
-          <h1 className="py-4 sm:py-5 text-three font-medium text-base sm:text-xl">Tools & Other</h1>
+          <h1 className="py-4 sm:py-5 text-two font-medium sm:text-xl">Tools & Other</h1>
           <hr className="border-gray-400 w-full" />
         </div>
 

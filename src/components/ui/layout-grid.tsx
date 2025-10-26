@@ -7,13 +7,15 @@ type Card = {
   id: number;
   className: string;
   thumbnail: string;
+  link?: string;
+  cusData?: string;
 };
 
 export const LayoutGrid = ({ cards }: { cards: Card[] }) => {
   return (
     <div className="w-full h-full py-10 grid grid-cols-1 md:grid-cols-3 max-w-7xl gap-4 relative">
       {cards.map((card, i) => (
-        <div key={i} className={cn(card.className)}>
+        <div key={i} className={cn(card.className)} data-cursor={card.cusData}>
           <motion.div
             className={cn(
               card.className,
@@ -21,7 +23,13 @@ export const LayoutGrid = ({ cards }: { cards: Card[] }) => {
             )}
             layoutId={`card-${card.id}`}
           >
-            <ImageComponent card={card} />
+            {card.link ? (
+              <a href={card.link} target="_blank" rel="noopener noreferrer">
+                <ImageComponent card={card} />
+              </a>
+            ) : (
+              <ImageComponent card={card} />
+            )}
           </motion.div>
         </div>
       ))}
