@@ -1,13 +1,11 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import Navbar from "../components/Navbar";
-import Sidebar from "../components/Sidebar";
 import { Poppins } from "next/font/google";
-import InitialLoad from "@/components/InitialLoad";
+import { LayoutContent } from "@/components/LayoutContent";
 
 const poppins = Poppins({
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700"], // choose what you need
+  weight: ["400", "500", "600", "700"],
 });
 
 export const metadata: Metadata = {
@@ -24,15 +22,11 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  // We'll use a client component wrapper since we need state
   return (
     <html lang="en">
-      <body className={`${poppins.className} antialiased flex`}>
-        <InitialLoad />
-        <Sidebar />
-        <div className="w-full">
-          <Navbar />
-          {children}
-        </div>
+      <body className={`${poppins.className} antialiased`}>
+        <LayoutContent>{children}</LayoutContent>
       </body>
     </html>
   );

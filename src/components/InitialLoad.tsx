@@ -2,11 +2,15 @@
 
 import { useEffect, useState, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+interface InitialLoadProps {
+  onLoadingComplete?: () => void;
+}
 
-export default function InitialLoad() {
+export default function InitialLoad({ onLoadingComplete }: InitialLoadProps) {
   const [progress, setProgress] = useState(0);
   const [isVisible, setIsVisible] = useState(true);
   const progressRef = useRef(0);
+  const hasCalledComplete = useRef(false);
 
   useEffect(() => {
     // More natural loading simulation with easing
@@ -28,6 +32,12 @@ export default function InitialLoad() {
         requestAnimationFrame(animateProgress);
       } else {
         // Brief pause at 100% before exiting
+
+        if (!hasCalledComplete.current && onLoadingComplete) {
+          hasCalledComplete.current = true;
+          onLoadingComplete();
+        }
+
         setTimeout(() => {
           setIsVisible(false);
         }, 600);
