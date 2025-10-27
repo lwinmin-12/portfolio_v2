@@ -3,6 +3,7 @@ import "./globals.css";
 import Navbar from "../components/Navbar";
 import Sidebar from "../components/Sidebar";
 import { Poppins } from "next/font/google";
+import InitialLoad from "@/components/InitialLoad";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -11,7 +12,8 @@ const poppins = Poppins({
 
 export const metadata: Metadata = {
   title: "Lwin Min Oo - Web Developer Portfolio",
-  description: "Showcasing the projects and skills of Lwin Min Oo, a proficient web developer.",
+  description:
+    "Showcasing the projects and skills of Lwin Min Oo, a proficient web developer.",
   icons: {
     icon: "/lmo.svg",
   },
@@ -25,6 +27,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${poppins.className} antialiased flex`}>
+        <InitialLoad />
         <Sidebar />
         <div className="w-full">
           <Navbar />

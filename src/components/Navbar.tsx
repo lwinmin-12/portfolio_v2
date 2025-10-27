@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { LayoutTextFlip } from "./ui/layout-text-flip";
-import Logo from "../../public/logo.svg"
+import Logo from "../../public/logo.svg";
 
 const Navbar = () => {
   return (

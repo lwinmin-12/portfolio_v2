@@ -46,14 +46,13 @@ export const detExp = [
   {
     id: 2,
     className: "col-span-1 object-cover",
-    thumbnail: "/expImage/cryptoPrj.png",
+    thumbnail: "/expImage/detfms.png",
     imgPosition: "object-fill",
 
   },
-
   {
     id: 3,
-    className: "col-span-1 object-cover ",
+    className: "col-span-1",
     thumbnail: "/expImage/me.jpeg",
     imgPosition: "object-cover",
 
