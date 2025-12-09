@@ -22,6 +22,13 @@ export function LayoutContent({ children }: { children: React.ReactNode }) {
           </div>
         </div>
       )}
+      <div className="flex">
+        <Sidebar />
+        <div className="w-full">
+          <Navbar />
+          {children}
+        </div>
+      </div>
     </>
   );
 }

@@ -13,10 +13,8 @@ export default function InitialLoad({ onLoadingComplete }: InitialLoadProps) {
   const hasCalledComplete = useRef(false);
 
   useEffect(() => {
-    // More natural loading simulation with easing
     const startTime = Date.now();
-    const duration = 3200; // Total duration in ms
-
+    const duration = 3000;
     const animateProgress = () => {
       const elapsed = Date.now() - startTime;
       const linearProgress = Math.min(elapsed / duration, 1);

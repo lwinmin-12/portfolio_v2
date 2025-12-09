@@ -21,38 +21,34 @@ const AboutMePage = () => {
         </div>
 
         {/* Content paragraphs */}
-        <div className=" space-y-4 text-gray-700">
+        <div className="space-y-4 text-gray-700">
           <p className="text-justify text-sm sm:text-base leading-relaxed">
-            Hi! I'm a developer with{" "}
+            I’m a{" "}
             <span className="font-semibold text-gray-800">
-              4 years of experience
+              full-stack developer
             </span>{" "}
-            in web development and software projects. My journey began during my
-            third year in Physics at Yadanarbon University, where I discovered
-            my passion for programming. While attending university, I also
-            completed the{" "}
+            with versatile experience across frontend, backend, cloud services,
+            and IoT integration. I have built and delivered complex systems
+            including <span className="font-medium">movie CMS dashboards</span>,{" "}
+            <span className="font-medium">customer service portals</span>,{" "}
+            <span className="font-medium">Next.js streaming platforms</span>,{" "}
+            <span className="font-medium">deep-link generators</span>, and{" "}
             <span className="font-medium">
-              A+ certification at I-Net College
-            </span>
-            , strengthening my foundation in IT and computing.
+              real-time fuel station management systems
+            </span>{" "}
+            using Raspberry Pi and Banana Pi devices.
           </p>
 
           <p className="text-justify text-sm sm:text-base leading-relaxed">
-            I then joined <span className="font-medium">MMS IT</span>, gaining
-            hands-on experience in building dynamic and responsive web
-            applications. To further advance my skills, I completed the{" "}
-            <span className="font-medium">NCC Level in Computing</span>,
-            deepening my understanding of software development, databases, and
-            modern programming practices.
-          </p>
-
-          <p className="text-justify text-sm sm:text-base leading-relaxed">
-            I've worked on a variety of projects, focusing on delivering{" "}
+            My technical expertise includes{" "}
             <span className="font-medium">
-              clean, efficient, and scalable solutions
+              React, Next.js, TypeScript, Node.js, Hono, NestJS, PostgreSQL,
+              Prisma, AWS (EC2, S3), Docker, and Linux
             </span>
-            . I enjoy solving problems through code, learning new technologies,
-            and creating experiences that make a difference.
+            . I focus on solving real-world problems, optimizing performance,
+            and building scalable, reliable software through{" "}
+            <span className="font-medium">clean architecture</span> and modern
+            development practices.
           </p>
         </div>
       </div>
